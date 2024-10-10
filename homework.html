@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Page</title>
+    <!-- External CSS file linking -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS styles -->
+    <style>
+        /* Example of using a class for multiple elements */
+        .list-item {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: darkblue;
+        }
+
+        /* Example of using an ID for a specific element */
+        #table-heading {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline styles for specific elements -->
+    <h1 style="color: green; font-family: Verdana;">H1 with Inline Style</h1>
+    <h2 style="color: blue; text-decoration: underline;">H2 with Inline Style</h2>
+    <h3 style="font-style: italic;">H3 with Inline Style</h3>
+
+    <!-- Link to Google with an image -->
+    <a href="https://www.google.com">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+             alt="Google Logo" width="200" style="border: 2px solid black;">
+    </a>
+
+    <br>
+
+    <!-- Example of an image with a class -->
+    <img src="завантаження.jpg" class="image-class" alt="Image not found" style="width: 200px; height: auto;"/>
+
+    <!-- Unordered list with class applied to list items -->
+    <ul>
+        <li class="list-item">1</li>
+        <li class="list-item">2</li>
+        <li class="list-item">3</li>
+        <li class="list-item">4</li>
+    </ul>
+
+    <!-- Adding a table with an ID and classes -->
+    <table border="1" id="main-table" style="width: 50%; margin-top: 20px;">
+        <caption id="table-heading">Sample Table</caption>
+        <tr>
+            <th class="table-header">Header 1</th>
+            <th class="table-header">Header 2</th>
+        </tr>
+        <tr>
+            <td class="table-data">Row 1, Col 1</td>
+            <td class="table-data">Row 1, Col 2</td>
+        </tr>
+        <tr>
+            <td class="table-data">Row 2, Col 1</td>
+            <td class="table-data">Row 2, Col 2</td>
+        </tr>
+    </table>
+</body>
+</html>
