@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Solutions</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__brand">
+                <h2>WebSolutions</h2>
+            </div>
+            <ul class="nav__menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Modern Digital Solutions</h1>
+                <p class="hero__subtext">We create beautiful, responsive websites that drive results for your business.</p>
+                <button class="btn btn--primary">Get Started</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2>About Us</h2>
+                        <p>We are a team of passionate developers and designers dedicated to creating exceptional digital experiences. Our approach combines cutting-edge technology with user-centered design.</p>
+                        <p>With years of experience in web development, we help businesses establish their online presence and achieve their digital goals.</p>
+                    </div>
+                    <div class="about__image">
+                        <div class="image-placeholder">
+                            <span>About Us Image</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="services__title">Our Services</h2>
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Custom websites and web applications built with modern technologies and best practices.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centered design that creates intuitive and engaging experiences for your audience.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">📱</div>
+                        <h3>Mobile Solutions</h3>
+                        <p>Responsive designs that work perfectly across all devices and screen sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 WebSolutions. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
