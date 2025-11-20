@@ -1,0 +1,245 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+// Header & Navigation
+.header {
+    background-color: $primary-color;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    @include container;
+    @include flex-between;
+    padding: $spacing-sm;
+    
+    &__brand {
+        color: $white;
+        font-weight: $font-weight-bold;
+    }
+    
+    &__menu {
+        display: flex;
+        list-style: none;
+        gap: $spacing-md;
+        
+        @include responsive(mobile) {
+            gap: $spacing-sm;
+        }
+        
+        a {
+            color: $white;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: $white;
+    min-height: 100vh;
+    @include flex-center;
+    text-align: center;
+    padding: $spacing-xl $spacing-sm;
+    margin-top: 60px;
+    
+    &__content {
+        max-width: 600px;
+    }
+    
+    &__title {
+        font-size: 3.5rem;
+        margin-bottom: $spacing-md;
+        
+        @include responsive(mobile) {
+            font-size: 2.5rem;
+        }
+    }
+    
+    &__subtext {
+        font-size: 1.25rem;
+        margin-bottom: $spacing-lg;
+        opacity: 0.9;
+    }
+}
+
+// Buttons
+.btn {
+    @include button-reset;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    font-weight: $font-weight-semibold;
+    transition: all 0.3s ease;
+    
+    &--primary {
+        background-color: $accent-color;
+        color: $white;
+        
+        &:hover {
+            background-color: darken($accent-color, 10%);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// About Section
+.about {
+    padding: $spacing-xl 0;
+    background-color: $light-gray;
+    
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-lg;
+        align-items: center;
+        
+        @include responsive(tablet) {
+            grid-template-columns: 1fr;
+            gap: $spacing-md;
+        }
+    }
+    
+    &__text {
+        h2 {
+            color: $primary-color;
+        }
+    }
+    
+    &__image {
+        @include flex-center;
+    }
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: $dark-gray;
+    @include flex-center;
+    border-radius: $border-radius;
+    color: $white;
+    font-weight: $font-weight-semibold;
+}
+
+// Services Section
+.services {
+    padding: $spacing-xl 0;
+    
+    &__title {
+        text-align: center;
+        color: $primary-color;
+        margin-bottom: $spacing-lg;
+    }
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $spacing-md;
+    }
+}
+
+.service-card {
+    background: $white;
+    padding: $spacing-lg;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    &__icon {
+        font-size: 3rem;
+        margin-bottom: $spacing-md;
+    }
+    
+    h3 {
+        color: $primary-color;
+        margin-bottom: $spacing-sm;
+    }
+    
+    p {
+        color: $dark-gray;
+    }
+}
+
+// Contact Section
+.contact {
+    padding: $spacing-xl 0;
+    background-color: $light-gray;
+    
+    h2 {
+        text-align: center;
+        color: $primary-color;
+        margin-bottom: $spacing-lg;
+    }
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    .form-group {
+        margin-bottom: $spacing-md;
+        
+        label {
+            display: block;
+            margin-bottom: $spacing-xs;
+            font-weight: $font-weight-semibold;
+            color: $primary-color;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: $spacing-sm;
+            border: 1px solid $dark-gray;
+            border-radius: $border-radius;
+            font-family: inherit;
+            
+            &:focus {
+                outline: none;
+                border-color: $accent-color;
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    background-color: $primary-color;
+    color: $white;
+    padding: $spacing-lg 0;
+    
+    &__content {
+        @include flex-between;
+        
+        @include responsive(mobile) {
+            flex-direction: column;
+            gap: $spacing-md;
+            text-align: center;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: $spacing-md;
+    
+    a {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
